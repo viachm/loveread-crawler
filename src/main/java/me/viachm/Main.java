@@ -79,7 +79,7 @@ public class Main {
                 try {
                     System.out.println("Processing url " + url);
                     Document document = Jsoup.connect(url).get();
-                    Elements paragraphs = document.select("p").not("style");
+                    Elements paragraphs = document.select("p.MsoNormal").not("style");
 
                     for (Element paragraph : paragraphs) {
                         text.append(paragraph.text());
